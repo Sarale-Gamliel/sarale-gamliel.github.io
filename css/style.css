@@ -192,6 +192,10 @@ section.page-section h2 { font-size: 28px; font-weight: 800; margin-bottom: 24px
 
 .project-card-link { display: block; color: inherit; }
 
+.project-card-image-wrap { position: relative; }
+
+.project-card-image-link { display: block; }
+
 .project-card-image { aspect-ratio: 16 / 9; background: var(--accent-soft); overflow: hidden; }
 
 .project-card-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -231,31 +235,25 @@ section.page-section h2 { font-size: 28px; font-weight: 800; margin-bottom: 24px
   white-space: nowrap;
 }
 
-.project-card-actions { padding: 0 20px 20px; }
-
-.project-card-demo-link {
+.project-card-demo-badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--accent-soft);
+  background: var(--surface);
   color: var(--accent-dark);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.project-card-demo-link:hover { background: var(--accent); color: #fff; }
-
-.project-card-demo-link-disabled {
-  background: transparent;
-  color: var(--text-secondary);
-  border: 1px dashed var(--border);
-  cursor: default;
-}
-
-.project-card-demo-link-disabled:hover { background: transparent; color: var(--text-secondary); }
+.project-card-demo-badge:hover { background: var(--accent); color: #fff; }
 
 .site-footer {
   border-top: 1px solid var(--border);
