@@ -45,6 +45,26 @@ test('renderProjectCard shows the coming soon badge when there are no links', ()
   assert.match(html, /Coming Soon/);
 });
 
+test('renderProjectCard includes a live demo link on the card when a demo link exists', () => {
+  const html = renderProjectCard(liveProject, 'en', labels);
+  assert.match(html, /project-card-demo-link/);
+  assert.match(html, /View Live Demo/);
+  assert.match(html, /https:\/\/example\.com/);
+});
+
+test('renderProjectCard has no demo link on the card when there is no demo link', () => {
+  const html = renderProjectCard(comingSoonProject, 'en', labels);
+  assert.doesNotMatch(html, /project-card-demo-link/);
+});
+
+test('renderProjectCard does not nest an anchor inside the detail link', () => {
+  const html = renderProjectCard(liveProject, 'en', labels);
+  const detailLinkOpen = html.indexOf('project.html?id=');
+  const demoLinkOpen = html.indexOf('project-card-demo-link');
+  const innerAnchorClose = html.indexOf('</a>');
+  assert.ok(detailLinkOpen < innerAnchorClose && innerAnchorClose < demoLinkOpen, 'demo link must be outside the detail <a>, not nested inside it');
+});
+
 test('renderProjectDetail includes live demo and code buttons when links exist', () => {
   const html = renderProjectDetail(liveProject, 'en', labels);
   assert.match(html, /View Live Demo/);

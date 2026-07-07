@@ -29,18 +29,24 @@
     const badge = isComingSoon(project)
       ? `<span class="badge-coming-soon">${escapeHtml(labels.comingSoon)}</span>`
       : '';
+    const demoAction = project.links.demo
+      ? `<div class="project-card-actions"><a class="project-card-demo-link" href="${project.links.demo}" target="_blank" rel="noopener">${escapeHtml(labels.viewLiveDemo)}</a></div>`
+      : '';
     return `
-      <a class="project-card" href="project.html?id=${encodeURIComponent(project.id)}">
-        <div class="project-card-image"><img src="${project.image}" alt="${escapeHtml(name)}" loading="lazy"></div>
-        <div class="project-card-body">
-          <div class="project-card-header">
-            <h3>${escapeHtml(name)}</h3>
-            ${badge}
+      <div class="project-card">
+        <a class="project-card-link" href="project.html?id=${encodeURIComponent(project.id)}">
+          <div class="project-card-image"><img src="${project.image}" alt="${escapeHtml(name)}" loading="lazy"></div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h3>${escapeHtml(name)}</h3>
+              ${badge}
+            </div>
+            <p>${escapeHtml(desc)}</p>
+            <div class="tech-tags">${renderTechTags(project.tech)}</div>
           </div>
-          <p>${escapeHtml(desc)}</p>
-          <div class="tech-tags">${renderTechTags(project.tech)}</div>
-        </div>
-      </a>`;
+        </a>
+        ${demoAction}
+      </div>`;
   }
 
   function renderProjectDetail(project, lang, labels) {
