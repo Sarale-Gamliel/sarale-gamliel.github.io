@@ -295,5 +295,4 @@ a.sublink:hover { border-color: var(--accent); color: var(--accent); }
   section.page-section { padding: 40px 0; }
   section.page-section h2 { font-size: 22px; }
   .site-header .logo { font-size: 16px; }
-  .btn-download-cv { display: none; }
 }
