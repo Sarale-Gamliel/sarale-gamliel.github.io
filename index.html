@@ -4,13 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarale Gamliel — AI Product Developer | Full Stack Developer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="container">
-    <h1>Scaffold OK</h1>
+  <header class="site-header">
+    <div class="container">
+      <span class="logo">Sarale Gamliel</span>
+      <div class="header-actions">
+        <a class="btn-download-cv" data-i18n="downloadCv" href="assets/resume.pdf" download>Download CV</a>
+        <button id="lang-toggle" type="button">עברית</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="hero-title-label" data-i18n="heroTitle">AI Product Developer | Full Stack Developer</span>
+      <h1 data-i18n="heroName">Sarale Gamliel</h1>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">Turning ideas into AI-powered products.</p>
+      <div class="hero-links">
+        <a href="mailto:saraledafna@gmail.com">saraledafna@gmail.com</a>
+        <a href="tel:0542838288">054-283-8288</a>
+        <a href="https://linkedin.com/in/sarale-gamliel-il" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Sarale-Gamliel" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <a class="hero-cta" data-i18n="heroCta" href="#projects">View Projects</a>
+    </section>
+
+    <section class="page-section container">
+      <h2 data-i18n="aboutHeading">About</h2>
+      <p class="about-text" data-i18n="aboutText"></p>
+    </section>
+
+    <section class="page-section container">
+      <h2 data-i18n="skillsHeading">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3 data-i18n="skillsFrontendLabel">Frontend</h3>
+          <p data-i18n="skillsFrontend"></p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skillsBackendLabel">Backend</h3>
+          <p data-i18n="skillsBackend"></p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skillsDatabasesLabel">Databases</h3>
+          <p data-i18n="skillsDatabases"></p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skillsAiToolsLabel">AI Tools</h3>
+          <p data-i18n="skillsAiTools"></p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skillsAiDevLabel">AI Development</h3>
+          <p data-i18n="skillsAiDev"></p>
+        </div>
+        <div class="skill-card">
+          <h3 data-i18n="skillsToolsLabel">Tools &amp; Platforms</h3>
+          <p data-i18n="skillsTools"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section container">
+      <h2 data-i18n="experienceHeading">Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <span class="exp-role" data-i18n="exp1Role"></span>
+          <span class="exp-org" data-i18n="exp1Org"></span>
+          <span class="exp-dates">2025 – Present</span>
+          <p class="exp-desc" data-i18n="exp1Desc"></p>
+        </div>
+        <div class="experience-item">
+          <span class="exp-role" data-i18n="exp2Role"></span>
+          <span class="exp-org" data-i18n="exp2Org"></span>
+          <span class="exp-dates">2023 – 2025</span>
+          <p class="exp-desc" data-i18n="exp2Desc"></p>
+        </div>
+        <div class="experience-item">
+          <span class="exp-role" data-i18n="exp3Role"></span>
+          <span class="exp-org" data-i18n="exp3Org"></span>
+          <span class="exp-dates">2025</span>
+          <p class="exp-desc" data-i18n="exp3Desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="page-section container">
+      <h2 data-i18n="projectsHeading">Projects</h2>
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footerText">Let's build something great together.</p>
+      <div class="footer-links">
+        <a href="mailto:saraledafna@gmail.com">saraledafna@gmail.com</a>
+        <a href="https://linkedin.com/in/sarale-gamliel-il" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Sarale-Gamliel" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
