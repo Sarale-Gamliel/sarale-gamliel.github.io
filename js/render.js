@@ -32,7 +32,7 @@
     const detailHref = `project.html?id=${encodeURIComponent(project.id)}`;
     const demoBadge = project.links.demo
       ? `<a class="project-card-demo-badge" href="${project.links.demo}" target="_blank" rel="noopener">${escapeHtml(labels.viewLiveDemo)}</a>`
-      : '';
+      : `<span class="project-card-demo-badge project-card-demo-badge-disabled">${escapeHtml(labels.comingSoon)}</span>`;
     return `
       <div class="project-card">
         <div class="project-card-image-wrap">

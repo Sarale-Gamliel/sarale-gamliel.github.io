@@ -52,9 +52,11 @@ test('renderProjectCard shows a demo badge on the image corner when a demo link 
   assert.match(html, /https:\/\/example\.com/);
 });
 
-test('renderProjectCard has no demo badge when there is no demo link', () => {
+test('renderProjectCard shows a disabled demo badge placeholder when there is no demo link', () => {
   const html = renderProjectCard(comingSoonProject, 'en', labels);
-  assert.doesNotMatch(html, /project-card-demo-badge/);
+  assert.match(html, /project-card-demo-badge-disabled/);
+  assert.match(html, /Coming Soon/);
+  assert.doesNotMatch(html, /<a class="project-card-demo-badge"/);
 });
 
 test('renderProjectCard does not nest the demo badge anchor inside the image link', () => {
