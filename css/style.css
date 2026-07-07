@@ -287,3 +287,13 @@ section.page-section h2 { font-size: 28px; font-weight: 800; margin-bottom: 24px
 a.sublink:hover { border-color: var(--accent); color: var(--accent); }
 
 .sublink-disabled { color: var(--text-secondary); opacity: 0.7; }
+
+@media (max-width: 640px) {
+  .hero { padding: 64px 0 48px; }
+  .hero h1 { font-size: 30px; }
+  .hero-subtitle { font-size: 16px; }
+  section.page-section { padding: 40px 0; }
+  section.page-section h2 { font-size: 22px; }
+  .site-header .logo { font-size: 16px; }
+  .btn-download-cv { display: none; }
+}
