@@ -52,9 +52,11 @@ test('renderProjectCard includes a live demo link on the card when a demo link e
   assert.match(html, /https:\/\/example\.com/);
 });
 
-test('renderProjectCard has no demo link on the card when there is no demo link', () => {
+test('renderProjectCard shows a disabled demo placeholder when there is no demo link', () => {
   const html = renderProjectCard(comingSoonProject, 'en', labels);
-  assert.doesNotMatch(html, /project-card-demo-link/);
+  assert.match(html, /project-card-demo-link-disabled/);
+  assert.match(html, /Coming Soon/);
+  assert.doesNotMatch(html, /<a class="project-card-demo-link"/);
 });
 
 test('renderProjectCard does not nest an anchor inside the detail link', () => {

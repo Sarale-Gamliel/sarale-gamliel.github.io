@@ -31,7 +31,7 @@
       : '';
     const demoAction = project.links.demo
       ? `<div class="project-card-actions"><a class="project-card-demo-link" href="${project.links.demo}" target="_blank" rel="noopener">${escapeHtml(labels.viewLiveDemo)}</a></div>`
-      : '';
+      : `<div class="project-card-actions"><span class="project-card-demo-link project-card-demo-link-disabled">${escapeHtml(labels.comingSoon)}</span></div>`;
     return `
       <div class="project-card">
         <a class="project-card-link" href="project.html?id=${encodeURIComponent(project.id)}">

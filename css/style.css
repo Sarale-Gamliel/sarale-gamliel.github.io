@@ -248,6 +248,15 @@ section.page-section h2 { font-size: 28px; font-weight: 800; margin-bottom: 24px
 
 .project-card-demo-link:hover { background: var(--accent); color: #fff; }
 
+.project-card-demo-link-disabled {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px dashed var(--border);
+  cursor: default;
+}
+
+.project-card-demo-link-disabled:hover { background: transparent; color: var(--text-secondary); }
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 40px 0;
