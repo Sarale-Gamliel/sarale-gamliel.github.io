@@ -48,7 +48,7 @@
         he: 'חוויית קנייה אונליין מודרנית המתמקדת בממשק משתמש אינטואיטיבי, אופטימיזציית המרה, והזמנה דיגיטלית חלקה. נבנתה עם תהליכים אוטומטיים, התראות מייל, ופתרונות תשלום משולבים.'
       },
       tech: ['React', 'Next.js', 'Supabase', 'Vercel', 'Resend', 'Payment Integrations'],
-      links: { github: null, demo: null },
+      links: { github: null, demo: 'https://mazal-uvracha-store.vercel.app/' },
       image: 'assets/projects/grocery-store.svg'
     },
     {
@@ -93,7 +93,7 @@
         he: 'אוסף משחקי דפדפן קטנים ועצמאיים שנבנו כדי לתרגל לוגיקת JavaScript וטיפול ב-DOM.'
       },
       tech: ['JavaScript', 'HTML', 'CSS'],
-      links: { github: null, demo: null },
+      links: { github: null, demo: 'https://games-navy-delta.vercel.app/' },
       image: 'assets/projects/mini-games.svg',
       subLinks: [
         { name: { en: 'Tic-Tac-Toe', he: 'איקס עיגול' }, github: 'https://github.com/Sarale-Gamliel/Tic-Tac-Toe', demo: null },
